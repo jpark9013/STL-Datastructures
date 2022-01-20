@@ -14,7 +14,7 @@ namespace stl {
 
 // in retrospect, it may have been a better decision to inherit vector from array rather than vice versa
 template<typename T, size_t N>
-class array : vector<T> {
+class array : protected vector<T> {
 
   private:
 

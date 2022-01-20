@@ -11,8 +11,8 @@
 namespace stl {
 
 template<typename T, size_t N>
-constexpr array<T, N>::array() noexcept {
-  this->vector(N);
+constexpr array<T, N>::array() noexcept : vector<T>(N) {
+
 }
 
 template<typename T, size_t N>

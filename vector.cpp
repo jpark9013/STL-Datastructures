@@ -79,7 +79,7 @@ constexpr vector<T>::vector(const vector<T> &other) {
 }
 
 template<typename T>
-constexpr vector<T>::~vector<T>() = default;
+constexpr vector<T>::~vector() = default;
 
 template<typename T>
 vector<T>& vector<T>::operator = (const vector<T> &other) = default;
@@ -402,7 +402,7 @@ constexpr auto operator <=> (const vector<T> &a, const vector<T> &b) {
 }
 
 template<typename T>
-constexpr void vector<T>::swap(const vector<T> &other) {
+constexpr void vector<T>::swap(vector<T> &other) {
   stl::swap(arr, other.arr);
   stl::swap(sz, other.sz);
   stl::swap(cap, other.cap);

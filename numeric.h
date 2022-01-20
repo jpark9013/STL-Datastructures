@@ -14,6 +14,6 @@ typedef unsigned long long uint64_t;
 typedef long long int64_t;
 typedef int int32_t;
 
-}
+} // namespace stl
 
 #endif //STL_NUMERIC_H

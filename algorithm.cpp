@@ -68,4 +68,4 @@ constexpr void swap(T &a, T &b) noexcept {
   a = c;
 }
 
-}
+} // namespace stl

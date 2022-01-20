@@ -35,6 +35,6 @@ const T& max(const T &a, const T &b, Comp comp);
 template<typename T>
 constexpr void swap(T &a, T &b) noexcept;
 
-}
+} // namespace stl
 
 #endif //STL_ALGORITHM_H

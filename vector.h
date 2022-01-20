@@ -14,7 +14,7 @@ namespace stl {
 template<typename T>
 class vector {
 
-  private:
+  protected:
 
   typedef T& reference;
   typedef const T& const_reference;
@@ -106,10 +106,10 @@ class vector {
   template<typename OutputStream>
   friend OutputStream& operator << (OutputStream &out, const vector<T> &x);
 
-  constexpr friend bool operator == (const vector<T> &a, const vector<T> &b);
-  constexpr friend auto operator <=> (const vector<T> &a, const vector<T> &b);
+  // constexpr friend bool operator == (const vector<T> &a, const vector<T> &b);
+  // constexpr friend auto operator <=> (const vector<T> &a, const vector<T> &b);
 
-  constexpr void swap(const vector<T> &other);
+  constexpr void swap(vector<T> &other);
 
   // returns number of erased elements (both erase_value and erase_if)
   template<typename U>
@@ -120,6 +120,6 @@ class vector {
   constexpr size_t erase_if(Pred pred);
 };
 
-}
+} // namespace stl
 
 #endif //STL_VECTOR_H
