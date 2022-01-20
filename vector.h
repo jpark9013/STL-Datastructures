@@ -100,7 +100,7 @@ class vector {
 
   constexpr void push_back(const_reference x);
   constexpr void emplace_back(T x);
-  constexpr void pop_back();
+  constexpr void pop_back(size_t n = 1);
   constexpr void resize(size_t n, const_reference x = T());
 
   template<typename OutputStream>

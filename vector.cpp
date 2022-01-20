@@ -79,9 +79,7 @@ constexpr vector<T>::vector(const vector<T> &other) {
 }
 
 template<typename T>
-constexpr vector<T>::~vector<T>() {
-  delete[] arr;
-}
+constexpr vector<T>::~vector<T>() = default;
 
 template<typename T>
 vector<T>& vector<T>::operator = (const vector<T> &other) = default;
@@ -336,8 +334,10 @@ constexpr void vector<T>::emplace_back(T x) {
 }
 
 template<typename T>
-constexpr void vector<T>::pop_back() {
-  sz--;
+constexpr void vector<T>::pop_back(size_t n) {
+  // Include this assert here, even though this function overall is O(1) :)
+  assert(sz >= n);
+  sz -= n;
 }
 
 template<typename T>
