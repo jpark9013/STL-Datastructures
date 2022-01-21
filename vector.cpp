@@ -79,7 +79,9 @@ constexpr vector<T>::vector(const vector<T> &other) {
 }
 
 template<typename T>
-constexpr vector<T>::~vector() = default;
+constexpr vector<T>::~vector() {
+  delete[] arr;
+}
 
 template<typename T>
 vector<T>& vector<T>::operator = (const vector<T> &other) = default;
@@ -116,7 +118,7 @@ constexpr typename vector<T>::reference vector<T>::at(size_t ind) {
 template<typename T>
 constexpr void vector<T>::set_alloc(size_t n) {
   alloc = n;  // check later ig?
-  assert(alloc != 0);
+  assert(alloc >= 2);
 }
 
 template<typename T>
