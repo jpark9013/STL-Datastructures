@@ -4,8 +4,20 @@
 
 #include "vector.h"
 
-using namespace stl;
+#include <iostream>
+
+void test() {
+  stl::vector<int> vec(5);
+  for (int i = 0; i < 5; i++) {
+    vec[i] = i;
+  }
+  for (int i : vec) {
+    std::cout << i << ' ';
+  }
+  std::cout << '\n';
+}
 
 int main() {
+  test();
   return 0;
 }
