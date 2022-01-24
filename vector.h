@@ -96,7 +96,7 @@ class vector {
 
   // both of these use assert since they're O(n)
   constexpr void erase(size_t ind);  // erases element at ind index
-  constexpr void erase(size_t first, size_t last);  // erases from range [first, last]
+  constexpr void erase(size_t first, size_t last);  // erases from range [first_ptr, last_ptr]
 
   constexpr void push_back(const_reference x);
   constexpr void emplace_back(T x);

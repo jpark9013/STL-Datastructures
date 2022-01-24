@@ -27,7 +27,7 @@ class priority_queue {
   // get right child
   size_t right(size_t x);
 
-  // get parent node (one level up)
+  // get parent node_ptr (one level up)
   size_t parent(size_t x);
 
   void heapify_up(size_t ind);
