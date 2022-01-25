@@ -35,6 +35,14 @@ const T& max(const T &a, const T &b, Comp comp);
 template<typename T>
 constexpr void swap(T &a, T &b) noexcept;
 
+// sorts are strictly O(comp * n log n)
+// bc it's always mergesort
+template<typename it>
+constexpr void sort(it first, it last);
+
+template<typename it, typename Compare>
+constexpr void sort(it first, it last, Compare comp);
+
 } // namespace stl
 
 #endif //STL_ALGORITHM_H
